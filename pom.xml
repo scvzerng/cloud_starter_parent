@@ -17,7 +17,6 @@
         <!--  MyBatis Generator  -->
         <targetJavaProject>${project.basedir}/src/main/java</targetJavaProject>
         <targetResourcesProject>${project.basedir}/src/main/resources</targetResourcesProject>
-        <fastjsonVersion>1.2.40</fastjsonVersion>
         <api.prefix>com/yazuo/**/</api.prefix>
     </properties>
 
@@ -26,6 +25,61 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yazuo.intelligent</groupId>
+            <artifactId>clound-bootstrap-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yazuo.architecture</groupId>
+            <artifactId>shutdown-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.yazuo.intelligent</groupId>
+            <artifactId>logger-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.yazuo.intelligent</groupId>
+            <artifactId>cache-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yazuo.intelligent</groupId>
+            <artifactId>swagger-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox.ui</groupId>
+            <artifactId>springfox-swagger-ui-rfc6570</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -52,6 +106,20 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.3.6</version>
+                <configuration>
+                    <!--<username>842494771@qq.com</username>-->
+                    <!--<password>443683059a</password>-->
+                    <repository>
+                        registry.cn-hangzhou.aliyuncs.com/scvzerng/${project.artifactId}
+                    </repository>
+                    <tag>${project.version}</tag>
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
