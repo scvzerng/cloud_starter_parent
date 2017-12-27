@@ -26,27 +26,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
             <optional>true</optional>
-            <version>1.5.2.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
     <dependencyManagement>
+
         <dependencies>
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjsonVersion}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.18</version>
-                <optional>true</optional>
+                <groupId>com.yazuo.intelligent</groupId>
+                <artifactId>dependencies</artifactId>
+                <version>CRM.S0</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
