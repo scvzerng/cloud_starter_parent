@@ -62,12 +62,6 @@
             <groupId>com.yazuo.intelligent</groupId>
             <artifactId>logger-starter</artifactId>
         </dependency>
-        <!--热启动-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
         <!--缓存-->
         <dependency>
             <groupId>com.yazuo.intelligent</groupId>
