@@ -241,22 +241,15 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-jar-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>client</id>
-                                <goals><goal>jar</goal></goals>
-                                <phase>package</phase>
-                                <configuration>
-                                    <classifier>client</classifier>
-                                    <includes>
-                                        <include>${api.prefix}clients/**</include>
-                                        <include>${api.prefix}entity/**</include>
-                                        <include>${api.prefix}model/**</include>
-                                        <include>${api.prefix}api/**</include>
-                                    </includes>
-                                </configuration>
-                            </execution>
-                        </executions>
+                        <configuration>
+                            <classifier>client</classifier>
+                            <includes>
+                                <include>${api.prefix}clients/**</include>
+                                <include>${api.prefix}entity/**</include>
+                                <include>${api.prefix}model/**</include>
+                                <include>${api.prefix}api/**</include>
+                            </includes>
+                        </configuration>
                     </plugin>
 
                 </plugins>
