@@ -237,12 +237,11 @@
         <profile>
             <id>client</id>
             <build>
-                <finalName>${project.artifactId}-${project.version}</finalName>
+                <finalName>${project.artifactId}-client-${project.version}</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>client</classifier>
                             <includes>
                                 <include>${api.prefix}clients/**</include>
                                 <include>${api.prefix}entity/**</include>
