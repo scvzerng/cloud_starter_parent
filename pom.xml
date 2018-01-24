@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-    <groupId>com.yazuo.intelligent</groupId>
+    <groupId>com.zero.scvzerng</groupId>
     <artifactId>cloud-starter-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -17,7 +17,7 @@
         <!--  MyBatis Generator  -->
         <targetJavaProject>${project.basedir}/src/main/java</targetJavaProject>
         <targetResourcesProject>${project.basedir}/src/main/resources</targetResourcesProject>
-        <api.prefix>com/yazuo/**/</api.prefix>
+        <api.prefix>com/**/</api.prefix>
     </properties>
 
     <dependencies>
@@ -39,14 +39,14 @@
         </dependency>
         <!--spring cloud 必须要的依赖-->
         <dependency>
-            <groupId>com.yazuo.intelligent</groupId>
-            <artifactId>clound-bootstrap-starter</artifactId>
+            <groupId>com.zero.scvzerng</groupId>
+            <artifactId>cloud-bootstrap-starter</artifactId>
         </dependency>
         <!--优雅停机插件-->
-        <dependency>
-            <groupId>com.yazuo.architecture</groupId>
-            <artifactId>shutdown-starter</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.yazuo.architecture</groupId>-->
+            <!--<artifactId>shutdown-starter</artifactId>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -59,12 +59,12 @@
         </dependency>
         <!--日志-->
         <dependency>
-            <groupId>com.yazuo.intelligent</groupId>
+            <groupId>com.zero.scvzerng</groupId>
             <artifactId>logger-starter</artifactId>
         </dependency>
         <!--缓存-->
         <dependency>
-            <groupId>com.yazuo.intelligent</groupId>
+            <groupId>com.zero.scvzerng</groupId>
             <artifactId>cache-starter</artifactId>
         </dependency>
         <!--redis-->
@@ -74,7 +74,7 @@
         </dependency>
         <!--文档-->
         <dependency>
-            <groupId>com.yazuo.intelligent</groupId>
+            <groupId>com.zero.scvzerng</groupId>
             <artifactId>swagger-starter</artifactId>
         </dependency>
         <dependency>
@@ -99,9 +99,9 @@
 
         <dependencies>
             <dependency>
-                <groupId>com.yazuo.intelligent</groupId>
+                <groupId>com.zero.scvzerng</groupId>
                 <artifactId>dependencies</artifactId>
-                <version>CRM.S0</version>
+                <version>SCVZERNG.S0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -327,34 +327,8 @@
             <id>aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
-        <repository>
-            <id>nexus</id>
-            <url>http://nexus.yazuosoft.com/nexus/content/groups/public-all/</url>
-        </repository>
-        <repository>
-            <id>releases</id>
-            <url>http://nexus.yazuosoft.com/nexus/content/repositories/releases</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>Snapshots</id>
-            <url>http://nexus.yazuosoft.com/nexus/content/repositories/snapshots</url>
-        </repository>
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.yazuosoft.com/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>Snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://nexus.yazuosoft.com/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+
 
 </project>
